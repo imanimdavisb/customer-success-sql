@@ -27,21 +27,6 @@ then runs SQL queries to compute:
 | **Response Time** | Average first-response time (hours) per month |
 
 ## Project structure
-customer-success-sql/
-├── data/
-│   └── generate_data.py    # builds the synthetic SQLite database
-├── sql/
-│   ├── kpis.sql            # raw SQL for each top-level KPI
-│   └── charts.sql          # raw SQL feeding each chart
-├── src/
-│   ├── db.py                # DB connection + query helper
-│   ├── kpis.py               # computes & prints the KPI report
-│   ├── charts.py              # generates chart PNGs
-│   └── main.py                 # runs everything end-to-end
-├── output/
-│   └── charts/               # generated PNG charts
-├── requirements.txt
-└── README.md
 ## Getting started
 
 ```bash
@@ -62,12 +47,6 @@ python main.py
 ```
 
 Sample output:
-=== Customer Success — Top KPIs ===
-Customer Satisfaction (CSAT)....... 3.67 / 5
-Net Promoter Score (NPS)........... -14.7
-Renewal Rate....................... 75.4%
-Tickets Closed..................... 787
-Charts saved to: output/charts
 ## Example charts
 
 ![Satisfaction Trend](output/charts/satisfaction_trend.png)
