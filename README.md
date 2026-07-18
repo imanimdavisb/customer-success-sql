@@ -59,16 +59,12 @@ python main.py
 ```
 
 ## Sample output
-
-​```
 === Customer Success — Top KPIs ===
 Customer Satisfaction (CSAT)....... 3.67 / 5
 Net Promoter Score (NPS)........... -14.7
 Renewal Rate....................... 75.4%
 Tickets Closed..................... 787
-
 Charts saved to: output/charts
-​```
 ## Example charts
 
 ![Satisfaction Trend](output/charts/satisfaction_trend.png)
