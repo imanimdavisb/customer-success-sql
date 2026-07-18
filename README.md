@@ -4,11 +4,47 @@ A portfolio project that simulates a SaaS company's **Customer Success** data
 and uses **SQL + Python** to compute key metrics and generate charts,
 the kind of dashboard a Customer Success or Ops team might rely on.
 
+![Customer Success Dashboard](output/charts/satisfaction_trend.png)
+> **Note:** All data is synthetically generated for demonstration purposes and does not represent any real company, customers, or SaaS product.
+
 ## What it does
 
 The project generates a synthetic SQLite database of customers, support
 tickets, satisfaction/NPS surveys, contract renewals, and product usage logs,
 then runs SQL queries to compute:
+
+## Business Problem
+
+[#business-problem](#business-problem)
+
+Customer Success and Ops teams need fast answers to questions like:
+
+- Is customer satisfaction trending up or down?
+- Which complaint categories are driving the most support volume?
+- Are we at risk of losing revenue — is the renewal rate slipping?
+- Is the team keeping up with tickets, or is response time creeping up?
+
+Instead of pulling these numbers manually from separate systems (support
+tickets, survey tools, billing/contracts), this project centralizes them
+in one SQL-backed model with a single command to regenerate the full report.
+
+## Key Findings
+
+[#key-findings](#key-findings)
+
+Based on the sample run in this README:
+
+- **CSAT sits at 3.67 / 5** — solidly middling, with room to improve
+- **NPS is negative (-14.7)**, meaning detractors currently outnumber promoters —
+  a signal worth digging into by complaint category
+- **Renewal rate is 75.4%**, meaning roughly 1 in 4 contracts churn — a natural
+  next step would be cross-referencing this against CSAT/NPS per account
+- **787 tickets closed** in the simulated window, with the "Complaints by Category"
+  chart showing where ticket volume concentrates
+
+*(All figures come from the synthetic dataset described below — they
+illustrate the kind of insight the queries surface, not a real company's
+performance.)*
 
 ### Top KPIs
 | KPI | Description |
@@ -72,7 +108,6 @@ Charts saved to: output/charts
 
 ## Example charts
 
-![Satisfaction Trend](output/charts/satisfaction_trend.png)
 ![Complaints by Category](output/charts/complaints.png)
 ![Product Usage](output/charts/product_usage.png)
 ![Response Time](output/charts/response_time.png)
